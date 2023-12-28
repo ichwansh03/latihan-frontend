@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <p>Convert farenheit to celcius</p>
+    <p id="demo"></p>
+
+    <script>
+        function toCelcius(f){
+            return (5/9) * (f-32);
+        }
+
+        let value = toCelcius(70);
+        document.getElementById("demo").innerHTML = value;
+    </script>
+</body>
+</html>
