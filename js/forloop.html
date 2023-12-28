@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays Loop For In</h1>
+    <p>for in statement</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const number = [1,2,3,4,5];
+
+        let space = "";
+        for (let i in number) {
+            space += number[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = space;
+    </script>
+</body>
+</html>
