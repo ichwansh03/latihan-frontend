@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript HTML DOM</h2>
+
+    <div id="main">
+        <p>Finding HTML Elements by TagName</p>
+        <p>this code is example to demo get elements by class and tagname</p>
+        <p class="intro">Hello World!</p>
+    </div>
+
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+
+    <script>
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+
+        document.getElementById("demo").innerHTML = 
+        'the second paragraf inside main is: ' + y[1].innerHTML;
+
+        const byClass = document.getElementsByClassName("intro");
+        document.getElementById("demo2").innerHTML = 
+        'the first paragraph with class intro is '+byClass[0].innerHTML;
+    </script>
+</body>
+</html>
