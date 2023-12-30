@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Prompt</h2>
+    <button onclick="showPrompt()">Try it!</button>
+    <p id="demo"></p>
+
+    <script>
+        function showPrompt(){
+            let text;
+            let name = prompt("Masukkan nama anda: ", "Nama Lengkap");
+
+            if (name == null || name == "") {
+                text = "User cancelled the prompt.";
+            } else {
+                text = "Hello "+name+"!, selamat datang";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
