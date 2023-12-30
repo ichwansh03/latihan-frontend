@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #myDiv {
+            background-color: cadetblue;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+    <p>This example uses the addEventListener method to execute a function when a user clicks on a button.</p>
+    <button id="myButton">Try it</button>
+
+    <p id="demo"></p>
+
+    <div id="myDiv">
+        <p>example div element on click with event onmouse</p>
+    </div>
+
+    <p id="demo_move"></p>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", showAlert);
+
+        function showAlert() {
+            alert ("Alerta Alerta!");
+        }
+
+        window.addEventListener("resize", function(){
+            document.getElementById("demo").innerHTML = Math.random();
+        });
+
+        document.getElementById("myDiv").addEventListener("mousemove", demoMouse);
+
+        function demoMouse() {
+            document.getElementById("demo_move").innerHTML = Math.random();
+        }
+
+        function removeHandler() {
+            document.getElementById("myDiv").removeEventListener("mousemove", demoMouse);
+        }
+    </script>
+</body>
+</html>
